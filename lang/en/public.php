@@ -22,5 +22,6 @@
         'cv_drop'=>'Drop Here Your CV',
         'cv_message'=>'Message',
         'cv_drop_message'=>'Drop here only pdf or docs file',
+        'phone_number'=>"Phone Number",
     ]
 ?>

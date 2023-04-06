@@ -48,6 +48,11 @@
                     <i class="icon-speedometer menu-icon"></i><span class="nav-text">Subscribers</span>
                 </a>
             </li>
+            <li>
+                <a class="" href="<?php echo e(route('admin.carrier.index')); ?>">
+                    <i class="icon-speedometer menu-icon"></i><span class="nav-text">CV Bank</span>
+                </a>
+            </li>
 
             <li>
                 <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">

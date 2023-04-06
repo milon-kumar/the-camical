@@ -13,7 +13,9 @@ class CarrierController extends Controller
      */
     public function index()
     {
-        //
+        $cvs =  Carrier::latest()->get();
+
+        return view('backend.admin.pages.cv.index');
     }
 
     /**

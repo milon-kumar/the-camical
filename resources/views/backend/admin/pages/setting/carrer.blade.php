@@ -20,8 +20,8 @@
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-md-12">
-                                            <input type="hidden" name="types[]" value="carrer_em_headding">
-                                            <input type="text" class="form-control" placeholder="Carrer Header" name="carrer_em_headding" value="{{ get_setting('carrer_em_headding') }}">
+                                            <input type="hidden" name="types[]" value="carrer_en_headding">
+                                            <input type="text" class="form-control" placeholder="Carrer Header" name="carrer_en_headding" value="{{ get_setting('carrer_en_headding') }}">
                                         </div>
                                     </div>
 

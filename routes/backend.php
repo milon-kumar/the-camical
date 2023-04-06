@@ -53,5 +53,6 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>['auth','admin']],f
 
     //Localization
     Route::get('/locale/{locale}',[BusinessSettingController::class,'setLocale'])->name('locale')->withoutMiddleware(['auth','admin']);
+
 });
 

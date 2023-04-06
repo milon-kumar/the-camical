@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('carriers', function (Blueprint $table) {
             $table->id();
+            $table->string('phone');
+            $table->string('emial')->nullable();
+            $table->text('message')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

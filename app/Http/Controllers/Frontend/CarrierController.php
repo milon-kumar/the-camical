@@ -29,7 +29,21 @@ class CarrierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'phone'=>'required',
+            'image'=>'required',
+        ]);
+
+
+        Carrier::create([
+            'phone'=>$request->input('phone'),
+            'email'=>$request->input('email') ?? '',
+            'message'=>$request->input('message') ?? '',
+            'image'=>uploadImage($request),
+        ]);
+
+        toast('Cv Droped Successfully......... :)','success');
+        return redirect()->back();
     }
 
     /**

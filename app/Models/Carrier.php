@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Carrier extends Model
 {
     use HasFactory;
+    protected $table ="carriers";
+    protected $guarded =['id'];
 }
