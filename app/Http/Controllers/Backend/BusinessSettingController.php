@@ -29,6 +29,11 @@ class BusinessSettingController extends Controller
         return view('backend.admin.pages.setting.footer');
     }
 
+    public function othersCarrer()
+    {
+        return view('backend.admin.pages.setting.carrer');
+    }
+
     public function update(Request $request)
     {
         foreach ($request->types as $key => $type) {

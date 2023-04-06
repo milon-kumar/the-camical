@@ -48,6 +48,9 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>['auth','admin']],f
     Route::post('/setting-heorimage',[BusinessSettingController::class,'settingHeorimage'])->name('homepage.setting.heorimage');
     Route::post('/setting-aboutimage',[BusinessSettingController::class,'settingAboutimage'])->name('homepage.setting.aboutimage');
 
+    //Route
+    Route::get('/others-carrer',[BusinessSettingController::class,'othersCarrer'])->name('others.carrer');
+
     //Localization
     Route::get('/locale/{locale}',[BusinessSettingController::class,'setLocale'])->name('locale')->withoutMiddleware(['auth','admin']);
 });

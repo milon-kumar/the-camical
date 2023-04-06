@@ -112,7 +112,8 @@
 
                             <?php if( $categories->count() > 0): ?><i class="fa fa-angle-down" aria-hidden="true"></i><?php endif; ?>
                         </a>
-                        <ul class="dropdown-menu">
+                        <?php if( $categories->count() > 0): ?>
+                            <ul class="dropdown-menu">
                             <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <li>
                                     <a href="<?php echo e(route('diseases-subcategory',optional($category)->slug)); ?>">
@@ -127,6 +128,7 @@
                                 </li>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </ul>
+                        <?php endif; ?>
                     </li>
 
                     <li class="<?php echo e(Route::is('plant-disease') ? 'active' :''); ?>">

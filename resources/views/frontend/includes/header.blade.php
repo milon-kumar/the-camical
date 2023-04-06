@@ -107,7 +107,8 @@
                         <a href="#">{{__('public.plant_disease')}}
                             @if( $categories->count() > 0)<i class="fa fa-angle-down" aria-hidden="true"></i>@endif
                         </a>
-                        <ul class="dropdown-menu">
+                        @if( $categories->count() > 0)
+                            <ul class="dropdown-menu">
                             @foreach($categories as $category)
                                 <li>
                                     <a href="{{ route('diseases-subcategory',optional($category)->slug) }}">
@@ -120,6 +121,7 @@
                                 </li>
                             @endforeach
                         </ul>
+                        @endif
                     </li>
 
                     <li class="{{ Route::is('plant-disease') ? 'active' :'' }}">
