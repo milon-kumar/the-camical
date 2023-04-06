@@ -1,7 +1,6 @@
-@extends('frontend.layout.app')
-@section('title','About Us')
-@section('content')
-    <section class="header-title section-padding" style="background: url( {{ asset('/') }}assets/frontend/images/sub/about-bg.jpg)">
+<?php $__env->startSection('title','About Us'); ?>
+<?php $__env->startSection('content'); ?>
+    <section class="header-title section-padding" style="background: url( <?php echo e(asset('/')); ?>assets/frontend/images/sub/about-bg.jpg)">
         <div class="container">
             <h2 class="title">Our Team</h2>
             <span class="sub-title">Home / <span class="text-color">Our Team</span></span>
@@ -42,4 +41,6 @@
     </section> <!-- team-section -->
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layout.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH G:\Milon Kumar Tailwind Css\Laravel\The Camical Project\Agriculture\resources\views/frontend/pages/carrer/create.blade.php ENDPATH**/ ?>
